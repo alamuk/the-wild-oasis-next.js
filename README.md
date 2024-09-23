@@ -3,6 +3,58 @@
 [JSON placeholder](https://jsonplaceholder.typicode.com/)
 
 
+## Project Task:
+---------------
+1. Users of the App are `potential guests` and `actual guests`. 
+2. Guests should be able to `learn all about` the Wild Oasis Hotel
+3. Guests should be able to `get information` about each `cabin` and see booked `dates`
+4. Guests should be able to `filter cabins` by their maximum guest capacity
+5. Guests should be able to `reserve a cabin` for a certain date range 
+6. Reservations are `not paid online`. Payments will be made at the property upon arrival. 
+7. therefore, new reservation should be set to `uncofirmed`(booked but not yet checked in)
+8. Guests should be able to `view` all their `past and future reservations` 
+9. Guests should be able to `update or delete a reservation` 
+10. Guests need to `sign up and login` before they can reserve a cabin and perform any operation
+11. On signup, each guest should `get a profile in the DB`
+12. Guests should be able to `set and update basic data` about their `profile` to make check-in at the hotel faster
+
+
+## project Pages:
+-----------------
+1. `About page` for task-2
+2. `Cabin page` for task -3 and 4
+3. `Reservations page` for task - 5, 6, 7, 8, 9
+4. `Authentication page` for task — 10, 11
+5. `profile page` for task - 12
+
+
+## Technology Decision: 
+-----------------------
+1. Framework - `NEXT.js` 
+2. UI state management- `React Context API`
+3. DB / API - `supabase` 
+4. Styling - `tailwindcss`
+
+
+
+
+
+
+
+
+# Theories of the Projects 
+-------------------------
+
+### SSR Model
+- first = UI = f(data) = serverside rendering
+- second = UI = f(state) = client side rendering
+- hydrate means—adding back HTML interaction ability
+- React server-means React Own Server site. NOt the real server sites `not the Web Server` 
+- React Client-means React Own client site. NOt the real browser sites `not the HTML/ DOM` 
+- Both `client` and `server` `components` are `initially rendered` on the `real server` when SSR is used 
+- `after that` - `server component run only on the actual server site` and `client component run only actual client site`. 
+
+
 
 ### What does mean UI in React 
 ---------------------------
@@ -115,3 +167,24 @@ drawbacks:
 - means—one `component` calls `another component` 
 - it `uses` another component inside `its own JSX body `
 
+----------------------------------------------------------------------------
+How rendering works: 
+- Tree of[]() component instances
+- components tree 
+- virtual Dom 
+- DOM elements (HTML)
+
+with server 
+- `Component Three`
+- server components instances (sc)
+- clients components instances (cc)
+- use clients 
+- render
+- placeholder
+- serialized "" props passed from SC to CC
+- Url to script with component code
+- RSc Payload
+- React-describes the `UI` as `data` not the finished HTML. 
+- server will run first, then client
+- first = UI = f(data) 
+- second = UI = f(state)
